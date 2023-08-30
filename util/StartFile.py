@@ -15,3 +15,7 @@ def start_file_doc():
 
 def start_file_py():
     os.startfile("file.py")
+
+
+if __name__ == "__main__":
+    start_file_html()
