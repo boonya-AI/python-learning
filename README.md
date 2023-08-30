@@ -23,3 +23,29 @@ https://wiki.python.org/moin/BeginnersGuide/Programmers
             - madagascar/
                 - __init__.py
                 - bar.py
+
+### Git token 登录和克隆代码问题
+
+#### github token
+
+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  2024-08-20
+
+
+#### 不出登录框 ，删除windows凭据
+
+https://blog.csdn.net/weixin_45606415/article/details/115473297
+
+git config --system --unset credential.helper
+
+
+####  unable to access  OpenSSL SSL_read: Connection was reset, errno 10054
+
+
+git config --global http.sslVerify "false"
+
+### venv 虚拟环境添加
+
+1. PyCharm IDE 右上角 找到设置
+2. 找到Settings 
+3. 找到Project: python-learning 
+4. Add Interpreter 即可
