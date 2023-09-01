@@ -44,3 +44,16 @@ def boolean_not_and_param(a, b):
         print("5 - 变量 a 和 b 都为 False，或其中一个变量为 False")
     else:
         print("5 - 变量 a 和 b 都为 True")
+
+def if_elif():
+    x = int(input("Please enter an integer: "))
+
+    if x < 0:
+        x = 0
+        print('Negative changed to zero')
+    elif x == 0:
+        print('Zero')
+    elif x == 1:
+        print('Single')
+    else:
+        print('More')
