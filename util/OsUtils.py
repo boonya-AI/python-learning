@@ -17,3 +17,18 @@ def support_methods():
 
 def sys_arg(file):
     os.system("python {} arg arg &".format(file))
+
+
+def print_current_dir_files():
+    for line in os.popen('dir /B *.py'): print(line, end='')
+
+
+def get_files():
+    return os.popen('dir /B *.py')
+
+
+if __name__ == "__main__":
+    print_current_dir_files()
+    I = get_files()
+    print(I)
+    print(I.__next__())
