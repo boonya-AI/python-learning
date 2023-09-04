@@ -1,21 +1,25 @@
 import sys
 
+
 def platform():
-    sys.platform
+    return sys.platform
+
 
 def maxsize():
-    sys.maxsize
+    return sys.maxsize
+
 
 def version():
-    sys.version
+    return sys.version
 
-def isWindows():
+
+def is_windows():
     return sys.platform[:3] == 'win'
+
 
 def path():
     return sys.path
 
+
 def models():
     return sys.modules
-
-
