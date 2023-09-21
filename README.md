@@ -49,3 +49,30 @@ git config --global http.sslVerify "false"
 2. 找到Settings 
 3. 找到Project: python-learning 
 4. Add Interpreter 即可
+
+### Python 换源
+
+#### 临时换源
+
+###### 清华源
+pip install markdown -i https://pypi.tuna.tsinghua.edu.cn/simple
+###### 阿里源
+pip install markdown -i https://mirrors.aliyun.com/pypi/simple/
+###### 腾讯源
+pip install markdown -i http://mirrors.cloud.tencent.com/pypi/simple
+###### 豆瓣源
+pip install markdown -i http://pypi.douban.com/simple/
+
+
+#### 永久换源
+
+###### 清华源
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+###### 阿里源
+pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
+###### 腾讯源
+pip config set global.index-url http://mirrors.cloud.tencent.com/pypi/simple
+###### 豆瓣源
+pip config set global.index-url http://pypi.douban.com/simple/
+###### 换回默认源
+pip config unset global.index-url
