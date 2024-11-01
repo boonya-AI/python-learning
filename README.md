@@ -76,3 +76,16 @@ pip config set global.index-url http://mirrors.cloud.tencent.com/pypi/simple
 pip config set global.index-url http://pypi.douban.com/simple/
 ###### 换回默认源
 pip config unset global.index-url
+
+
+# VS代码提示
+
+https://zhuanlan.zhihu.com/p/112431369
+
+
+## 写代码语法提示
+pip install flake8 
+
+## 自动格式化代码
+pip install yapf
+
