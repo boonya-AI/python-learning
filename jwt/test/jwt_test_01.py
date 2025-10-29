@@ -18,7 +18,9 @@ payload = {
 # 配置主体信息，一般是登录成功的用户之类的，因为jwt的主体信息很容易被解码，所以不要放敏感信息
 # 当然也可以将敏感信息加密后再放进payload
 
-token = jwt.encode(payload=payload, key=salt, algorithm='HS256', headers=headers).decode('utf-8')
+token = jwt.encode(payload=payload, key=salt, algorithm='HS256', headers=headers)
+#.decode('utf-8')
+
 # 生成token
 print(token)
 

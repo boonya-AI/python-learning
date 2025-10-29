@@ -15,15 +15,15 @@ logging.basicConfig(format='%(asctime)s - %(pathname)s[line:%(lineno)d] - %(leve
 # MySQL数据库用户名
 MYSQL_USERNAME = 'root'
 # 数据库密码
-MYSQL_PASSWORD = 'mypassword'
+MYSQL_PASSWORD = '123456'
 # 数据库主机地址
-MYSQL_HOST = '192.168.1.4'
+MYSQL_HOST = '127.0.0.1'
 # 数据库端口
 MYSQL_PORT = 3306
 # 备份文件存放路径
 BACKUP_PATH = 'backup'
 # 排除，不进行备份操作的数据库名称集合
-DISABLED_DATABASES = {'information_schema', 'PyMysql', 'performance_schema', 'sys'}
+DISABLED_DATABASES = {'information_schema', 'test', 'performance_schema', 'sys'}
 
 
 def mkdir_if_not_exists(path):
@@ -47,7 +47,7 @@ def create_mysql_conn(db='PyMysql'):
     Returns:
 
     """
-    conn = pymysql.connect(host=MYSQL_HOST, port=MYSQL_PORT, user=MYSQL_USERNAME, password=MYSQL_PASSWORD, db='PyMysql')
+    conn = pymysql.connect(host=MYSQL_HOST, port=MYSQL_PORT, user=MYSQL_USERNAME, password=MYSQL_PASSWORD, db='test')
     return conn
 
 
@@ -82,7 +82,7 @@ def backup_database(database):
     """
     logging.info('开始备份数据库 {}...'.format(database))
     # 通过调用mysqldump完成指定数据库的备份
-    command = 'mysqldump -h192.168.1.4 -uroot -p666 --add-drop-database --databases {database} > {backup_path}/{database}.sql'.format(
+    command = 'mysqldump -h127.0.0.1 -uroot -p123456 --add-drop-database --databases {database} > {backup_path}/{database}.sql'.format(
         database=database,
         backup_path=BACKUP_PATH)
     exit_code = subprocess.call(command, shell=True)
