@@ -102,7 +102,9 @@ def backup():
     databases = read_all_databases()
     # 逐个对数据库进行备份
     for database in databases:
-        backup_database(database)
+        # 指定一个库进行备份
+        if database == 'kuboard' :
+            backup_database(database)
 
 
 if __name__ == '__main__':
